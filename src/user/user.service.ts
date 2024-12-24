@@ -58,6 +58,7 @@ export class UserService {
     const token = await this.authService.generateToken(existingUser);
     return { user: existingUser, ...token };
   }
+
   async getUserById(id: number): Promise<User | null> {
     const user = await this.prisma.user.findUnique({
       where: { id },
