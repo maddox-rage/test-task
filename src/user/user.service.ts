@@ -6,9 +6,9 @@ import {
 } from '@nestjs/common';
 import { AuthService } from 'src/auth/auth.service';
 import { PrismaService } from 'src/prisma.service';
-import { SignUpOrSignInDto } from './dto/signUpOrSignIn.dto';
 import { User } from '@prisma/client';
 import * as bcrypt from 'bcryptjs';
+import { SignUpOrSignInDto } from 'src/user/dto/SignUpOrSignIn.dto';
 
 @Injectable()
 export class UserService {
