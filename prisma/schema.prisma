@@ -47,6 +47,7 @@ model Upvote {
 
   feedback   Feedback @relation(fields: [feedbackId], references: [id])
   user       User     @relation(fields: [userId], references: [id])
+   @@unique([userId, feedbackId])
 }
 
 model Category {
